@@ -4,6 +4,15 @@
 .header {
 	background-color: $verde;
 
+	@include tablet {
+		&.fixed {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			box-shadow: 0.1rem 0.2rem 0.3rem #333;
+		}
+	}
 	.contenido-header {
 		padding: 2rem;
 		@include tablet {
@@ -35,7 +44,8 @@
 	a {
 		color: $blanco;
 		font-size: 2.4rem;
-		&:hover {
+		&:hover,
+		&.active {
 			color: $amarillo;
 		}
 	}
